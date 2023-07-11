@@ -209,12 +209,13 @@
             class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"
           ></div>
         </div>
+        <!-- <p>어쩌구 내용</p> -->
+        <!-- <br /> -->
+        <!-- <img src="img/편지예시.png" /> -->
         <div id="modal" class="modal">
           <div class="modal-content">
-            <!-- <p>어쩌구 내용</p> -->
-            <br />
-            <img src="img/편지예시.png" />
             <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" />
           </div>
         </div>
       </div>
@@ -224,128 +225,83 @@
             <div
               class="row d-flex align-items-center position-relative justify-content-center px-0 g-5"
             >
-              <div class="col-12 col-lg-6">
-                <div class="" onclick="openModal()">
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="thumbnail" onclick="openModal()">
                   <img
-                    src="img/듀란10.png"
-                    width="2280"
-                    height="1732"
-                    alt="abstract image"
+                    src="img/듀란1.png"
+                    width="300"
                     class="img-fluid position-relative rounded-5 shadow"
                     data-aos="fade-up"
                   />
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <div class="letter-content" onclick="openModal()">
+                <div class="thumbnail" onclick="openModal()">
                   <img
-                    src="img/듀란9.png"
-                    alt="abstract image"
+                    src="img/chacha.png"
+                    width="400"
+                    height="400"
                     class="img-fluid position-relative rounded-5 shadow"
                     data-aos="fade-up"
-                    data-aos-duration="2000"
                   />
                 </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="letter-content" onclick="openModal()">
-                  <img
-                    src="img/듀란4.png"
-                    width="1116"
-                    height="848"
-                    alt="abstract image"
-                    class="img-fluid position-relative rounded-5 shadow"
-                    data-aos="fade-up"
-                    data-aos-duration="3000"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-3">
+              <div class="col-12 col-md-6 col-lg-5">
                 <div class="letter-content" onclick="openModal()">
                   <img
                     src="img/듀란5.png"
-                    alt="abstract image"
                     class="img-fluid position-relative rounded-5 shadow"
                     data-aos="fade-up"
-                    data-aos-duration="2000"
                   />
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <img
-                  src="img/듀란4.png"
-                  width="1116"
-                  height="848"
-                  alt="abstract image"
-                  class="img-fluid position-relative rounded-5 shadow"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                />
+                <div class="letter-content" onclick="openModal()">
+                  <img
+                    src="img/듀란10.png"
+                    width="500"
+                    height="500"
+                    class="img-fluid position-relative rounded-5 shadow"
+                    data-aos="fade-up"
+                  />
+                </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-3">
+              <div class="col-12 col-md-6 col-lg-5">
                 <img
                   src="img/듀란3.png"
-                  alt="abstract image"
+                  width="500"
                   class="img-fluid position-relative rounded-5 shadow"
                   data-aos="fade-up"
-                  data-aos-duration="2000"
                 />
               </div>
               <div class="col-12 col-md-6 col-lg-3">
+                <img
+                  src="img/chacha.png"
+                  width="700"
+                  class="img-fluid position-relative rounded-5 shadow"
+                  data-aos="fade-up"
+                />
+              </div>
+              <div class="col-12 col-md-6 col-lg-5">
                 <div class="letter-content" onclick="openModal()"></div>
                 <img
-                  src="img/듀란4.png"
-                  width="1116"
-                  height="848"
+                  src="img/듀란6.png"
+                  width="700"
                   alt="abstract image"
                   class="img-fluid position-relative rounded-5 shadow"
                   data-aos="fade-up"
-                  data-aos-duration="3000"
                 />
               </div>
-            </div>
-
-            <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
-              <span class="h5 text-secondary fw-lighter">부제목</span>
-              <h2 class="display-4">내용</h2>
-            </div>
-            <div class="col-12 col-lg-5" data-aos="fade-left">
-              <h3 class="pt-5">타이틀1</h3>
-              <p class="text-secondary">
-                내용1<br />
-                <a href="#" class="link-fancy link-fancy-light me-2">사이트1</a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-arrow-right-circle"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-                  />
-                </svg>
-              </p>
-              <h3 class="border-top border-secondary pt-5 mt-5">타이틀2</h3>
-              <p class="text-secondary">
-                내용2<br />
-                <a href="#" class="link-fancy link-fancy-light me-2">사이트2</a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-arrow-right-circle"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-                  />
-                </svg>
-              </p>
+              <div class="col-12 col-md-6 col-lg-2">
+                <div class="letter-content" onclick="openModal()"></div>
+                <img
+                  src="img/듀란8.png"
+                  width="700"
+                  alt="abstract image"
+                  class="img-fluid position-relative rounded-5 shadow"
+                  data-aos="fade-up"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -481,16 +437,40 @@
 
         console.log(scrollpos);
       });
-      // letter section
       function openModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "block";
+        document.getElementById("modal").style.display = "block";
       }
 
+      // 모달 닫기
       function closeModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "none";
+        document.getElementById("modal").style.display = "none";
       }
+
+      var images = [
+        {
+          thumbnail: "img/듀란10.png",
+          letter: "img/편지예시.png",
+        },
+        {
+          thumbnail: "img/듀란9.png",
+          letter: "img/듀란1.png",
+        },
+        // 추가 이미지 정보를 여기에 추가할 수 있습니다
+      ];
+
+      images.forEach(function (image) {
+        var thumbnailImg = document.querySelector(
+          'img[src="' + image.thumbnail + '"]'
+        );
+        var letterImg = document.querySelector(
+          'img[src="' + image.letter + '"]'
+        );
+
+        thumbnailImg.addEventListener("click", function () {
+          document.getElementById("modalImage").src = image.letter;
+          openModal();
+        });
+      });
     </script>
   </body>
 </html>

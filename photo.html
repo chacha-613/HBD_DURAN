@@ -86,7 +86,7 @@
   >
     <nav
       id="navScroll"
-      class="navbar navbar-dark bg-black fixed-top px-vw-5"
+      class="navbar navbar-dark bg-transparent fixed-top px-vw-5"
       tabindex="0"
     >
       <div class="container">
@@ -109,23 +109,70 @@
           class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal"
         >
           <li class="nav-item">
-            <a class="nav-link fs-5" href="main.html" aria-label="about duran">
-              About
-            </a>
+            <a class="nav-link fs-5" href="main.html" aria-label="about duran"
+              >About</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5" href="photo.html" aria-label="with duran">
-              Photo
-            </a>
+            <a class="nav-link fs-5" href="photo.html" aria-label="with duran"
+              >Photo</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5" href="letter.html" aria-label="for duran">
-              Letter
-            </a>
+            <a class="nav-link fs-5" href="letter.html" aria-label="for duran"
+              >Letter</a
+            >
           </li>
         </ul>
       </div>
     </nav>
+
+    <style>
+      #navScroll {
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      #navScroll.navbar-scrolled {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      body {
+        margin-top: 70px; /* Adjust this value to match the height of your nav */
+      }
+
+      .w-100 {
+        position: relative;
+        z-index: 0;
+      }
+
+      .w-100:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("img/test.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.6;
+        z-index: -1;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const navScroll = document.getElementById("navScroll");
+        const scrolled = window.scrollY > 0;
+        navScroll.classList.toggle("navbar-scrolled", scrolled);
+      });
+    </script>
 
     <main>
       <div class="container">
@@ -139,21 +186,21 @@
                   Content page
                 </h1>
                 <p class="lead border-top pt-5 mt-5" data-aos="fade-up">
-                  내용 뭘로 채울까
+                  어떤 내용으로 채울까..
                 </p>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12 py-vh-2">
-              <img
-                src="img/사진.png"
-                width="1446"
-                height="982"
+              <!-- <img
+                src="img/듀란1.png"
+                width="300"
+
                 alt="abstract image"
                 class="img-fluid position-relative rounded-5 shadow"
                 data-aos="zoom-up"
-              />
+              /> -->
             </div>
           </div>
           <div class="col-12 col-lg-10 col-xl-8">

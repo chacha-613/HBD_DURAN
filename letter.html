@@ -226,7 +226,10 @@
               class="row d-flex align-items-center position-relative justify-content-center px-0 g-5"
             >
               <div class="col-12 col-md-6 col-lg-3">
-                <div class="thumbnail" onclick="openModal()">
+                <div
+                  class="thumbnail"
+                  onclick="openModal('img/듀란1.png', 'img/편지예시.png')"
+                >
                   <img
                     src="img/듀란1.png"
                     width="300"
@@ -236,7 +239,10 @@
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
-                <div class="thumbnail" onclick="openModal()">
+                <div
+                  class="thumbnail"
+                  onclick="openModal('img/chacha.png', 'img/듀란1.png')"
+                >
                   <img
                     src="img/chacha.png"
                     width="400"
@@ -437,38 +443,36 @@
 
         console.log(scrollpos);
       });
-      function openModal() {
-        document.getElementById("modal").style.display = "block";
-      }
-
-      // 모달 닫기
-      function closeModal() {
-        document.getElementById("modal").style.display = "none";
-      }
-
-      var images = [
+    </script>
+    <script>
+      /* var images = [
         {
-          thumbnail: "img/듀란10.png",
+          thumbnail: "img/듀란1.png",
           letter: "img/편지예시.png",
         },
         {
-          thumbnail: "img/듀란9.png",
-          letter: "img/듀란1.png",
+          thumbnail: "img/chacha.png",
+          letter: "img/듀란10.png",
         },
-        // 추가 이미지 정보를 여기에 추가할 수 있습니다
-      ];
+      
+      ]; */
+
+      function openModal(thumbnailSrc, letterSrc) {
+        document.getElementById("modalImage").src = letterSrc;
+        document.getElementById("modal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
 
       images.forEach(function (image) {
         var thumbnailImg = document.querySelector(
           'img[src="' + image.thumbnail + '"]'
         );
-        var letterImg = document.querySelector(
-          'img[src="' + image.letter + '"]'
-        );
 
         thumbnailImg.addEventListener("click", function () {
-          document.getElementById("modalImage").src = image.letter;
-          openModal();
+          openModal(image.thumbnail, image.letter);
         });
       });
     </script>

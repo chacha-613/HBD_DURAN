@@ -3893,8 +3893,9 @@ fieldset:disabled .btn {
 }
 
 .navbar {
+  height: 25px;
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-y: 0;
   --bs-navbar-color: rgba(17, 17, 17, 0.7);
   --bs-navbar-hover-color: rgba(17, 17, 17, 0.8);
   --bs-navbar-disabled-color: rgba(17, 17, 17, 0.3);
@@ -8673,6 +8674,11 @@ fieldset:disabled .btn {
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-orange{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-orange), var(--bs-bg-opacity)) !important;
 }
 
 .bg-white {

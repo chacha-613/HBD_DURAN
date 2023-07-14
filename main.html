@@ -76,6 +76,40 @@
           /* Chrome 26+, Opera 23+, Firefox 39+ */
             url("fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
       }
+      @font-face {
+        font-family: "MBC";
+        font-style: normal;
+        font-weight: 700;
+        src: local("MBC 1961"), url("fonts/MBC-1961.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "MBC2";
+        font-style: normal;
+        font-weight: 700;
+        src: local("MBC 1961굴림"),
+          url("fonts/MBC-1961-2.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "mayo";
+        font-style: normal;
+        src: local(""), url("fonts/Dovemayo_wild.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-b";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Bold.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-l";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Light.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-m";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Medium.ttf") format("truetype");
+      }
     </style>
   </head>
 
@@ -279,13 +313,19 @@
         </div>
       </div>
 
+      <style>
+        .smooth-transition {
+          transition: background-image 0.7s ease;
+        }
+      </style>
+
       <div class="container-fluid px-vw-5 position-relative" data-aos="fade">
         <div class="position-absolute w-100 h-50 bg-black top-0 start-0"></div>
         <div
-          class="position-relative py-vh-5 bg-cover bg-center rounded-5"
-          style="background-image: url(img/webp/abstract6.webp)"
-          onmouseover="this.style.backgroundImage = 'url(img/webp/abstract2.webp)'"
-          onmouseout="this.style.backgroundImage = 'url(img/webp/abstract6.webp)'"
+          class="position-relative py-vh-5 bg-cover bg-center rounded-5 smooth-transition"
+          style="background-image: url(img/bg/bg-before.png)"
+          onmouseover="this.style.backgroundImage = 'url(img/bg/bg-after.png)'"
+          onmouseout="this.style.backgroundImage = 'url(img/bg/bg-before.png)'"
           onmouseenter="changeProfile()"
           onmouseleave="resetProfile()"
         >
@@ -300,9 +340,26 @@
                     <h2
                       class="display-huge fw-bolder text-center"
                       data-aos="zoom-in-left "
-                      style="font-size: 40px"
+                      style="
+                        color: black;
+                        font-size: 40px;
+                        font-family: 'suite-b';
+                      "
                     >
                       듀란's Profile
+                      <br />
+                    </h2>
+                    <h4
+                      class="text-center"
+                      data-aos="zoom-in-left "
+                      style="
+                        color: black;
+                        font-size: 20px;
+                        font-family: 'suite-b';
+                      "
+                      id="explain"
+                    >
+                      (마우스를 프로필 안으로 옮겨보세요)
                       <br />
                     </h2>
                     <h2
@@ -317,7 +374,7 @@
                       width="684"
                       height="457"
                       alt=""
-                      class="img-fluid rounded-5"
+                      class="img-fluid rounded-5 profile-transition"
                       loading="lazy"
                       id="profileImage"
                     />
@@ -325,63 +382,207 @@
                 </div>
               </div>
               <div class="col-5 offset-1" id="section1">
+                <!-- <h3
+                  class="border-top border-secondary pt-5 mt-5"
+                  data-aos="zoom-in-left"
+                  style="
+                    color: black;
+                    font-size: 60px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
+                >
+                  <span style="white-space: nowrap"
+                    >듀란의 가짜 프로필 <br /><br />
+                  </span>
+                </h3> -->
                 <h3
                   class="border-top border-secondary pt-5 mt-5"
                   data-aos="zoom-in-left"
-                  style="color: black"
-                  id="nameHeader"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
                 >
-                  Name: 듀란
+                  <span style="white-space: nowrap">이름</span>
                 </h3>
-                <p class="h4 fw-lighter" style="color: black" id="nameText">
-                  듀란
+                <p
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;듀란<br /><br />
                 </p>
 
-                <h2
-                  class="border-top border-secondary pt-5 mt-5"
+                <h3
                   data-aos="zoom-in-left"
-                  style="color: black"
-                  id="nameKoreanHeader"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
                 >
-                  이름: 듀란
-                </h2>
+                  <span style="white-space: nowrap">성별</span>
+                </h3>
                 <p
-                  class="h4 fw-lighter"
-                  style="color: black"
-                  id="nameKoreanText"
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="gender"
                 >
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;여자<br /><br />
                 </p>
-                <h2
-                  class="border-top border-secondary pt-5 mt-5"
+
+                <h3
                   data-aos="zoom-in-left"
-                  style="color: black"
-                  id="percentageHeader"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
                 >
-                  98%
-                </h2>
+                  <span style="white-space: nowrap">나이</span>
+                </h3>
                 <p
-                  class="h4 fw-lighter"
-                  style="color: black"
-                  id="percentageText"
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="age"
                 >
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2살<br /><br />
                 </p>
-                <h2
-                  class="border-top border-secondary pt-5 mt-5"
+
+                <h3
                   data-aos="zoom-in-left"
-                  style="color: black"
-                  id="percentageKoreanHeader"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
                 >
-                  98%
-                </h2>
+                  <span style="white-space: nowrap">종족</span>
+                </h3>
                 <p
-                  class="h4 fw-lighter"
-                  style="color: black"
-                  id="percentageKoreanText"
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="tribe"
                 >
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;슬라임 <br /><br />
                 </p>
+
+                <h3
+                  data-aos="zoom-in-left"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
+                >
+                  <span style="white-space: nowrap">키</span>
+                </h3>
+                <p
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="height"
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2m<br /><br />
+                </p>
+
+                <h3
+                  data-aos="zoom-in-left"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
+                >
+                  <span style="white-space: nowrap">몸무게</span>
+                </h3>
+                <p
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="weight"
+                >
+                  &nbsp;&nbsp;100g<br /><br />
+                </p>
+
+                <h3
+                  data-aos="zoom-in-left"
+                  style="
+                    color: black;
+                    font-size: 40px;
+                    font-family: 'suite-b', sans-serif;
+                    display: inline;
+                  "
+                >
+                  <span style="white-space: nowrap">MBTI</span>
+                </h3>
+                <p
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="mbti"
+                >
+                  &nbsp;&nbsp;DXIP<br /><br />
+                </p>
+                <h3
+                  data-aos="zoom-in-left"
+                  style="
+                    color: black;
+                    font-size: 27px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                >
+                  <span style="white-space: nowrap"
+                    >더 알고싶다면<br /><a
+                      href="https://www.youtube.com/watch?v=MGYPnAvK0c8"
+                      ><span style="font-size: 10px"></span
+                      ><span class="letter"
+                        ><img src="img/youtube_30answer.svg" /></span></a
+                    ><br
+                  /></span>
+                </h3>
+                <p
+                  style="
+                    color: black;
+                    font-size: 30px;
+                    font-family: 'suite-m', sans-serif;
+                    display: inline;
+                  "
+                  id="mbti"
+                ></p>
               </div>
             </div>
           </div>
@@ -390,24 +591,72 @@
       <script>
         function changeProfile() {
           var profileImage = document.getElementById("profileImage");
-          profileImage.src = "img/듀란프로필2.png";
+          profileImage.classList.add("profile-transition");
+          profileImage.style.opacity = "0";
 
-          var nameHeader = document.getElementById("nameHeader");
-          nameHeader.innerText = "듀란:Name";
+          var explain = document.getElementById("explain");
+          explain.innerText = "(마우스를 프로필 밖으로 옮겨보세요)";
 
-          var nameKoreanHeader = document.getElementById("nameKoreanHeader");
-          nameKoreanHeader.innerText = "듀:이";
+          setTimeout(function () {
+            profileImage.src = "img/듀란프로필2.png";
+            profileImage.style.opacity = "1";
+          }, 300);
+
+          var gender = document.getElementById("gender");
+          gender.innerText =
+            "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0남자\n\n";
+
+          var tribe = document.getElementById("tribe");
+          tribe.innerText =
+            "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0오니\n\n";
+
+          var age = document.getElementById("age");
+          age.innerText = "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0147살\n\n";
+
+          var height = document.getElementById("height");
+          height.innerText =
+            "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0192cm\n\n";
+
+          var weight = document.getElementById("weight");
+          weight.innerText = "\u00A0\u00A087kg\n\n";
+
+          var mbti = document.getElementById("mbti");
+          mbti.innerText = "\u00A0\u00A0INTP\n\n";
         }
 
         function resetProfile() {
           var profileImage = document.getElementById("profileImage");
-          profileImage.src = "img/듀란프로필1.png";
+          profileImage.classList.add("profile-transition");
+          profileImage.style.opacity = "0";
 
-          var nameHeader = document.getElementById("nameHeader");
-          nameHeader.innerText = "Name: 듀란";
+          var explain = document.getElementById("explain");
+          explain.innerText = "(마우스를 프로필 안으로 옮겨보세요)";
 
-          var nameKoreanHeader = document.getElementById("nameKoreanHeader");
-          nameKoreanHeader.innerText = "이름: 듀란";
+          setTimeout(function () {
+            profileImage.src = "img/듀란프로필1.png";
+            profileImage.style.opacity = "1";
+          }, 300);
+
+          var gender = document.getElementById("gender");
+          gender.innerText =
+            "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0여자\n\n";
+
+          var tribe = document.getElementById("tribe");
+          tribe.innerText =
+            "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0슬라임\n\n";
+
+          var age = document.getElementById("age");
+          age.innerText = "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A02살\n\n";
+
+          var height = document.getElementById("height");
+          height.innerText =
+            "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A02m\n\n";
+
+          var weight = document.getElementById("weight");
+          weight.innerText = "\u00A0\u00A0100g\n\n";
+
+          var mbti = document.getElementById("mbti");
+          mbti.innerText = "\u00A0\u00A0DXIP\n\n";
         }
       </script>
       <!-- <div class="bg-dark py-vh-5">
@@ -728,15 +977,8 @@
                     loading="lazy"
                   />
                   <div class="p-5">
-                    <h2
-                      class="fw-lighter"
-                      ,
-                      style="
-                        color: white;
-                        font-family: 'WanjuDaedongSan-Bold', sans-serif;
-                      "
-                    >
-                      CHARACTER
+                    <h2 class="fw-lighter" , style="color: white">
+                      <b>CHARACTER</b>
                     </h2>
                     <p class="pb-4 text-secondary">
                       - 모든 캐릭터를 스스로 디자인했다. <br />

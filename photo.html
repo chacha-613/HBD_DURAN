@@ -86,7 +86,7 @@
   >
     <nav
       id="navScroll"
-      class="navbar navbar-dark bg-transparent fixed-top px-vw-5"
+      class="navbar navbar-dark bg-black fixed-top px-vw-5"
       tabindex="0"
     >
       <div class="container">
@@ -109,70 +109,23 @@
           class="navbar-nav mx-auto mb-2 mb-lg-0 list-group list-group-horizontal"
         >
           <li class="nav-item">
-            <a class="nav-link fs-5" href="main.html" aria-label="about duran"
-              >About</a
-            >
+            <a class="nav-link fs-5" href="main.html" aria-label="about duran">
+              About
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5" href="photo.html" aria-label="with duran"
-              >Photo</a
-            >
+            <a class="nav-link fs-5" href="photo.html" aria-label="with duran">
+              Photo
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5" href="letter.html" aria-label="for duran"
-              >Letter</a
-            >
+            <a class="nav-link fs-5" href="letter.html" aria-label="for duran">
+              Letter
+            </a>
           </li>
         </ul>
       </div>
     </nav>
-
-    <style>
-      #navScroll {
-        background-color: transparent;
-        transition: background-color 0.3s ease-in-out;
-      }
-
-      #navScroll.navbar-scrolled {
-        background-color: black;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
-
-      body {
-        margin-top: 70px; /* Adjust this value to match the height of your nav */
-      }
-
-      .w-100 {
-        position: relative;
-        z-index: 0;
-      }
-
-      .w-100:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("img/test.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.6;
-        z-index: -1;
-      }
-    </style>
-
-    <script>
-      window.addEventListener("scroll", function () {
-        const navScroll = document.getElementById("navScroll");
-        const scrolled = window.scrollY > 0;
-        navScroll.classList.toggle("navbar-scrolled", scrolled);
-      });
-    </script>
 
     <main>
       <div class="container">
@@ -224,103 +177,49 @@
     </main>
 
     <footer class="bg-black border-top border-dark">
-      <div class="container py-vh-4 text-secondary fw-lighter">
+      <div class="container py-vh-2 text-secondary fw-lighter">
         <div class="row">
           <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
             <a
               class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center"
               href="index.html"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-stack"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"
-                />
-                <path
-                  d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"
-                />
-              </svg>
-              <span class="ms-md-1 mt-1 fw-bolder me-md-5">Klar</span>
+              <img src="img/fordu_logo2.svg" />
             </a>
           </div>
           <div class="col border-end border-dark">
-            <span class="h6">Company</span>
+            <span class="h6">ABOUT</span>
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">About us</a>
+                <a href="main.html#section1" class="link-fancy link-fancy-light"
+                  >Profile</a
+                >
               </li>
               <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Legal</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Career</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Contact</a>
+                <a href="main.html#section2" class="link-fancy link-fancy-light"
+                  >Simple Info</a
+                >
               </li>
             </ul>
           </div>
           <div class="col border-end border-dark">
-            <span class="h6">Services</span>
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Products</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Customers</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light"
-                  >Success Stories</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">More</a>
-              </li>
-            </ul>
+            <span class="h6">Photo</span>
+            <ul class="nav flex-column"></ul>
           </div>
           <div class="col">
-            <span class="h6">Support</span>
+            <span class="h6">LETTER</span>
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">About us</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Legal</a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Career</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="link-fancy link-fancy-light">Contact</a>
+                <a href="letter.html" class="link-fancy link-fancy-light"
+                  >To. Duran</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="container text-center small py-vh-2 border-top border-dark">
-        Made by
-        <a
-          href="https://templatedeck.com"
-          class="link-fancy link-fancy-light"
-          target="_blank"
-          >templatedeck.com</a
-        >
+        Made by Chacha
       </div>
     </footer>
 

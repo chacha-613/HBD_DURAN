@@ -284,6 +284,10 @@
         <div
           class="position-relative py-vh-5 bg-cover bg-center rounded-5"
           style="background-image: url(img/webp/abstract6.webp)"
+          onmouseover="this.style.backgroundImage = 'url(img/webp/abstract2.webp)'"
+          onmouseout="this.style.backgroundImage = 'url(img/webp/abstract6.webp)'"
+          onmouseenter="changeProfile()"
+          onmouseleave="resetProfile()"
         >
           <div class="container px-vw-5 py-vh-3 rounded-5 shadow">
             <div class="row d-flex align-items-center">
@@ -316,8 +320,6 @@
                       class="img-fluid rounded-5"
                       loading="lazy"
                       id="profileImage"
-                      onmouseover="changeProfileImage()"
-                      onmouseout="resetProfileImage()"
                     />
                   </div>
                 </div>
@@ -327,39 +329,57 @@
                   class="border-top border-secondary pt-5 mt-5"
                   data-aos="zoom-in-left"
                   style="color: black"
+                  id="nameHeader"
                 >
                   Name: 듀란
                 </h3>
-                <p class="h4 fw-lighter" style="color: black">듀란</p>
+                <p class="h4 fw-lighter" style="color: black" id="nameText">
+                  듀란
+                </p>
 
                 <h2
                   class="border-top border-secondary pt-5 mt-5"
                   data-aos="zoom-in-left"
                   style="color: black"
+                  id="nameKoreanHeader"
                 >
                   이름: 듀란
                 </h2>
-                <p class="h4 fw-lighter" style="color: black">
+                <p
+                  class="h4 fw-lighter"
+                  style="color: black"
+                  id="nameKoreanText"
+                >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                 </p>
                 <h2
                   class="border-top border-secondary pt-5 mt-5"
                   data-aos="zoom-in-left"
                   style="color: black"
+                  id="percentageHeader"
                 >
                   98%
                 </h2>
-                <p class="h4 fw-lighter" style="color: black">
+                <p
+                  class="h4 fw-lighter"
+                  style="color: black"
+                  id="percentageText"
+                >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                 </p>
                 <h2
                   class="border-top border-secondary pt-5 mt-5"
                   data-aos="zoom-in-left"
                   style="color: black"
+                  id="percentageKoreanHeader"
                 >
                   98%
                 </h2>
-                <p class="h4 fw-lighter" style="color: black">
+                <p
+                  class="h4 fw-lighter"
+                  style="color: black"
+                  id="percentageKoreanText"
+                >
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
                 </p>
               </div>
@@ -367,6 +387,29 @@
           </div>
         </div>
       </div>
+      <script>
+        function changeProfile() {
+          var profileImage = document.getElementById("profileImage");
+          profileImage.src = "img/듀란프로필2.png";
+
+          var nameHeader = document.getElementById("nameHeader");
+          nameHeader.innerText = "듀란:Name";
+
+          var nameKoreanHeader = document.getElementById("nameKoreanHeader");
+          nameKoreanHeader.innerText = "듀:이";
+        }
+
+        function resetProfile() {
+          var profileImage = document.getElementById("profileImage");
+          profileImage.src = "img/듀란프로필1.png";
+
+          var nameHeader = document.getElementById("nameHeader");
+          nameHeader.innerText = "Name: 듀란";
+
+          var nameKoreanHeader = document.getElementById("nameKoreanHeader");
+          nameKoreanHeader.innerText = "이름: 듀란";
+        }
+      </script>
       <!-- <div class="bg-dark py-vh-5">
         <div class="container px-vw-5">
           <div class="row d-flex gx-5 align-items-center">

@@ -11,20 +11,21 @@
       content="A well made and handcrafted Bootstrap 5 template"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/apple-touch-icon.png"
-    />
-    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="img/favicon-32x32.png"
+      href="img/favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
       href="img/favicon-16x16.png"
     />
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png" />
@@ -76,6 +77,40 @@
           /* Chrome 26+, Opera 23+, Firefox 39+ */
             url("fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
       }
+      @font-face {
+        font-family: "MBC";
+        font-style: normal;
+        font-weight: 700;
+        src: local("MBC 1961"), url("fonts/MBC-1961.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "MBC2";
+        font-style: normal;
+        font-weight: 700;
+        src: local("MBC 1961굴림"),
+          url("fonts/MBC-1961-2.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "mayo";
+        font-style: normal;
+        src: local(""), url("fonts/Dovemayo_wild.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-b";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Bold.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-l";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Light.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-m";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Medium.ttf") format("truetype");
+      }
       .modal {
         display: none;
         position: fixed;
@@ -116,14 +151,6 @@
           class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center"
           href="index.html"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            class="bi bi-stack"
-            viewBox="0 0 16 16"
-          ></svg>
           <img src="img/fordu_logo.svg" />
         </a>
 
@@ -165,38 +192,7 @@
           >
             <div class="col-12 col-xl-10">
               <h1 class="display-huge mt-3 mb-3 lh-1">💌To. Duran💌</h1>
-
-              <!-- <audio controls>
-                <source
-                  src="/examples/media/sample_audio_ogg.ogg"
-                  type="audio/ogg"
-                />
-                <source
-                  src="/examples/media/sample_audio_mp3.mp3"
-                  type="audio/mpeg"
-                />
-                audio 지원 안될때 해당 문장이 나타납니다ㅠㅠ !!
-              </audio> -->
             </div>
-            <!-- <div class="col-12 text-center">
-              <br />
-              <a href="#" class="btn btn-xl btn-light"
-                >Join us
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-arrow-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                  />
-                </svg>
-              </a>
-            </div> -->
           </div>
         </div>
       </div>
@@ -209,9 +205,6 @@
             class="position-absolute w-100 h-50 bg-dark bottom-0 start-0"
           ></div>
         </div>
-        <!-- <p>어쩌구 내용</p> -->
-        <!-- <br /> -->
-        <!-- <img src="img/편지예시.png" /> -->
         <div id="modal" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -266,24 +259,31 @@
                   />
                 </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-1">
-                <div class="letter-content" onclick="openModal()">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div
+                  class="thumbnail"
+                  onclick="openModal('img/thumbnail/ts8.png', 'img/letter/008.png')"
+                >
                   <img
-                    src="img/듀란10.png"
+                    src="img/thumbnail/ts8.png"
                     width="500"
-                    height="500"
                     class="img-fluid position-relative rounded-5 shadow"
                     data-aos="fade-up"
                   />
                 </div>
               </div>
               <div class="col-12 col-md-6 col-lg-5">
-                <img
-                  src="img/듀란3.png"
-                  width="500"
-                  class="img-fluid position-relative rounded-5 shadow"
-                  data-aos="fade-up"
-                />
+                <div
+                  class="thumbnail"
+                  onclick="openModal('img/thumbnail/ts7.png', 'img/letter/007.png')"
+                >
+                  <img
+                    src="img/thumbnail/ts7.png"
+                    width="500"
+                    class="img-fluid position-relative rounded-5 shadow"
+                    data-aos="fade-up"
+                  />
+                </div>
               </div>
               <div class="col-12 col-md-6 col-lg-3">
                 <img

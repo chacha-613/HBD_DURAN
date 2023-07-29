@@ -11,20 +11,21 @@
       content="A well made and handcrafted Bootstrap 5 template"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/apple-touch-icon.png"
-    />
-    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="img/favicon-32x32.png"
+      href="img/favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
       href="img/favicon-16x16.png"
     />
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png" />
@@ -33,7 +34,6 @@
     <meta name="HandheldFriendly" content="true" />
     <title>About</title>
     <link rel="stylesheet" href="css/theme.min.css" />
-
     <style>
       /* inter-300 - latin */
       @font-face {
@@ -76,6 +76,40 @@
           /* Chrome 26+, Opera 23+, Firefox 39+ */
             url("fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
       }
+      @font-face {
+        font-family: "MBC";
+        font-style: normal;
+        font-weight: 700;
+        src: local("MBC 1961"), url("fonts/MBC-1961.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "MBC2";
+        font-style: normal;
+        font-weight: 700;
+        src: local("MBC 1961굴림"),
+          url("fonts/MBC-1961-2.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "mayo";
+        font-style: normal;
+        src: local(""), url("fonts/Dovemayo_wild.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-b";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Bold.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-l";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Light.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "suite-m";
+        font-style: normal;
+        src: local(""), url("fonts/SUITE-Medium.ttf") format("truetype");
+      }
     </style>
   </head>
 
@@ -94,14 +128,6 @@
           class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center"
           href="index.html"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            class="bi bi-stack"
-            viewBox="0 0 16 16"
-          ></svg>
           <img src="img/fordu_logo.svg" />
         </a>
 

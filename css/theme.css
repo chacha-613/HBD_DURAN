@@ -8676,7 +8676,7 @@ fieldset:disabled .btn {
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-orange{
+.bg-orange {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-orange), var(--bs-bg-opacity)) !important;
 }
@@ -12232,6 +12232,10 @@ img {
 
 .bg-center {
   background-position: center center;
+}
+
+.bg-orange {
+  background-color: #0b0b6e;
 }
 
 .bg-gray-100 {
